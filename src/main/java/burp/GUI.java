@@ -95,7 +95,7 @@ public class GUI implements IMessageEditorController {
         ConfigPanel.add(lbPort, gbc_lbPort);
 
         tfPort = new JTextField();
-        tfPort.setText("9898");
+        tfPort.setText("10921");
         tfPort.setColumns(10);
         GridBagConstraints gbc_tfPort = new GridBagConstraints();
         gbc_tfPort.fill = 2;

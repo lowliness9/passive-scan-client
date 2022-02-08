@@ -10,7 +10,7 @@ import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
 public class BurpExtender implements IBurpExtender,ITab,IProxyListener {
-    public final static String extensionName = "Passive Scan Client";
+    public final static String extensionName = "psc";
     public final static String version ="0.3.0";
     public static IBurpExtenderCallbacks callbacks;
     public static IExtensionHelpers helpers;
@@ -80,6 +80,21 @@ public class BurpExtender implements IBurpExtender,ITab,IProxyListener {
             IHttpService httpService = reprsp.getHttpService();
             String host = reprsp.getHttpService().getHost();
             //stdout.println(Config.DOMAIN_REGX);
+            String[] domainArr = new String[]{
+                    "baidu.com",
+                    "google.com",
+                    ".gov.cn",
+                    "mozilla.com",
+                    ".edu.cn",
+                    "yuque.com",
+                    ":5003",
+            };
+            for (String domain:domainArr){
+                if (host.contains(domain)){
+                    return;
+                }
+            }
+
             if(!Utils.isMathch(Config.DOMAIN_REGX,host)){
                 return;
             }
