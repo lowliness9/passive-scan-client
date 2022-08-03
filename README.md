@@ -1,6 +1,10 @@
 # Passive Scan Client | Burp被动扫描流量转发插件
 
 
+## Note改动
+1. 修改了插件在burp的显示名称，原来的太占用空间了，改为psc
+2. 增加了过滤的白名单域名，baidu/google/gov等
+
 ## 0x01 插件简介
 
 ```
