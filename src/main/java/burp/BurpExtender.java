@@ -81,13 +81,17 @@ public class BurpExtender implements IBurpExtender,ITab,IProxyListener {
             String host = reprsp.getHttpService().getHost();
             //stdout.println(Config.DOMAIN_REGX);
             String[] domainArr = new String[]{
-                    "baidu.com",
-                    "google.com",
+                    "baidu",
+                    "google",
                     ".gov.cn",
-                    "mozilla.com",
+                    "mozilla",
                     ".edu.cn",
                     "yuque.com",
-                    ":5003",
+                    "firefox",
+                    "91.108",
+                    "weibo",
+                    "taobao",
+                    "aliyun",
             };
             for (String domain:domainArr){
                 if (host.contains(domain)){
